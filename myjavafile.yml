@@ -1,16 +1,16 @@
 ---
-- hosts: mywebserver 
+- hosts: all 
   become: yes
   tasks: 
     - name: i want to install java jdk8 on ubuntu server
       apt:
-        name: "{{myjavajdk8onubuntu}}"
+        name: openjdk-8-jdk
         state: present 
       when: ansible_os_family=="Debian"
 
 
     - name: i want to install java jdk8 on redhat server
       yum:
-        name: "{{myjavajdk8onredhat}}"
+        name: java-1.8.0-openjdk
         state: present
       when: ansible_os_family=="RedHat"
