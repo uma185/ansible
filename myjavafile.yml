@@ -7,8 +7,6 @@
         name: {{"myjavajdk8onubuntu"}}
         state: present 
       when: ansible_os_family=="Debian"
-
-
     - name: i want to install java jdk8 on redhat server
       yum:
         name: {{"myjavajdk8onredhat"}}
