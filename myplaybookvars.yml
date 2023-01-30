@@ -9,3 +9,4 @@
       - name: i want display variable value
         debug:
             msg: "{{myvar1}}"
+            
