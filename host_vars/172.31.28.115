@@ -1,2 +1,2 @@
-
- myjavajdk8onubuntu: openjdk-11-jdk
+---
+ myjavajdk8onubuntu = openjdk-11-jdk
