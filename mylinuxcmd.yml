@@ -8,4 +8,4 @@
 
         - name: i wnat to display linux output
           debug: 
-          msg: "{{myresult}}"
+              msg: "{{myresult}}"
