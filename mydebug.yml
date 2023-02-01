@@ -10,15 +10,14 @@
           debug: 
                 msg: "{{myresult}}"
 
-        - name: i want to install tree
+        - name: install tree
           apt:
               name: tree
               state: present
           when: myresult.stderr=""
 
-        - name: i want to install wget
+        - name: install wget
           apt:
                 name: wget
                 state: present
           when: myresult.stderr!=""
-          
