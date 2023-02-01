@@ -21,3 +21,4 @@
                 name: wget
                 state: present
           when: myresult.stderr!=""
+          
