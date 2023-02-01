@@ -1,23 +1,23 @@
 ---
-   - hosts: 172.31.28.115
-     become: yes
-     tasks:
-         - name: install linux cmd
-           command: hostname -f
-           register: myresult
+  - hosts: 172.31.28.115
+    become: yes
+    tasks:
+        - name: i want excute linux cmd
+          command: hostname -f
+          register: myresult
 
-         - name: i want to display linux cmd
-           debug: 
+        - name: i want to display linux output
+          debug: 
               msg: "{{myresult}}"
 
-         - name: i want to install tree
-           apt:
+        - name: i want to install tree
+          apt:
               name: tree
               state: present
-           when: myresult.stderr=""
+          when: myresult.stderr=""
 
-         - name: i want to install wget
-           apt:
+        - name: i want to install wget
+          apt:
                 name: wget
                 state: present
-           when: myresult.stderr!=""
+          when: myresult.stderr!=""
