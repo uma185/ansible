@@ -6,6 +6,6 @@
           command: hostname -f
           register: myresult
 
-        - name: i wnat to display linux output
+        - name: i want to display linux output
           debug: 
               msg: "{{myresult}}"
