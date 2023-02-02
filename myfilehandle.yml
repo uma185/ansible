@@ -1,8 +1,10 @@
 ---
-  - hosts: 172.31.17.135
-    become: yes
-    tasks:
-       - name: i want to create a file
-         file:
-             path: /home/ubuntu/file1
-             state: touch
+- host: 172.31.17.135
+  become: yes
+  tasks:
+     - include_tasks: myfile.yml
+      
+     - name: install apache2
+       apt: 
+           name: apache2
+           state: present
