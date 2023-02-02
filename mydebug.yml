@@ -9,3 +9,15 @@
         - name: i want to display linux output
           debug: 
              msg: "{{myresult}}"
+
+        - name: install wget
+          apt:
+             name: wget
+             state: present
+          when: myresult.stderr==""
+
+        - name: install tree
+          apt:
+             name: tree
+             state: present
+          when: myresult.stderr!=""
