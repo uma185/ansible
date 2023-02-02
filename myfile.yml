@@ -1,5 +1,5 @@
 ---
-  - name: i want to create fileor copy file or alter file
-    template:
-        src: myindex.j2
-        dest: /var/www/html/index.html
+  - name: i want to create a file
+    file:
+        path: /home/ubuntu/myfile1.txt
+        state: touch
