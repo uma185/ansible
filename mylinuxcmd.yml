@@ -1,5 +1,5 @@
 ---
-  - hosts: 172.31.28.115
+  - hosts: 172.31.17.135
     become: yes
     tasks:
         - name: i want excute linux cmd
