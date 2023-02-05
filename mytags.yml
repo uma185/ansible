@@ -11,12 +11,12 @@
         - name: i want to install wget
           apt:
               name: wget
-              statee: present
+              state: present
           tags: mywget
-          ignore_errors: yes
         
         - name: i want to install git
           apt:
                name: git
-               state: present
+               statee: present
           tags: mygit
+          ignore_errors: yes
