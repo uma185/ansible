@@ -10,6 +10,5 @@
 
       - name: i want copy file or create file or alter file
         template: 
-        src: myindex.j2
-        dest: /var/www/html/index.html
-        
+           src: myindex.j2
+           dest: /var/www/html/index.html
