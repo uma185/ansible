@@ -1,0 +1,9 @@
+---
+  - hosts: 172.31.17.135
+    become: yes
+    tasks: 
+      - name: i want to create file
+        file:
+            path: /home/ubuntu/file1
+            state: touch
+                      
