@@ -8,7 +8,7 @@
            name: apache2
            state: present
 
-      - name: i want copy file or create file or alter file
+      - name: i want copy file  create file  alter file
         template: 
            src: myindex.j2
            dest: /var/www/html/index.html
